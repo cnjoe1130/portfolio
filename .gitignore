@@ -1,0 +1,12 @@
+# 工作文档（本地保留，不入库）
+check-*.mjs
+gh-*.mjs
+final-verify.mjs
+gap-check.mjs
+live-*.png
+发布说明与投递话术.md
+完成状态核对.md
+REDSecret查重核查报告.md
+边界声明核查清单.md
+evidence/interview-ANSWERS.md
+*.log

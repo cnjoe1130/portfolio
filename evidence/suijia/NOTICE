@@ -1,0 +1,16 @@
+随驾 SuiJia（iOS 实时聊天副驾）
+Copyright © 2026 cnjoe1130
+
+本项目基于 jev-chat-jarvis-ios（https://github.com/jev-chat/jev-chat-jarvis-ios）
+二次开发，MIT 协议。判断内核（Jev 接入）、键盘回复管线、话术库源自上游项目，
+Copyright © 2026 eatmoreduck 与 jev-chat 贡献者，详见上游 NOTICE。
+
+本项目新增：
+  - ReplayKit 屏幕广播实时上下文层（Broadcast/Sources/SampleHandler.swift）
+  - 本机 OCR 说话人归属（左右气泡分侧）
+  - App Group 对话累积存储（Shared/SuiJiaStore.swift）
+
+依据上游 NOTICE：本项目不使用「秒回」「Jev 聊天助手」「jev-chat」等上游名称，
+不以任何方式暗示由原作者出品或背书。上游的完整风险告知与使用约束见其仓库置顶。
+
+本项目与任何聊天平台及 Apple Inc. 均无关联。

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吴庆骏 · AI 产品经理 · 作品集</title>
+<meta name="description" content="吴庆骏 — 8 年电商业务 × 独立交付 5 个 AI 产品 × 运行中 7 个月的多 Agent 系统。AI 产品经理求职作品集。">
+<style>
+/* ============ Editorial / 编辑杂志风（StyleKit 规则） ============
+   背景 #F9F8F6 暖米白 · 前景 #1C1C1C · 纯单色无彩色强调
+   标题衬线 weight 400（永不加粗）· 正文无衬线 · rounded-none
+   无阴影 · 无渐变 · 无粗边框 · 分层透明度 /60 /40 /10 */
+:root{
+  --bg:#F9F8F6;
+  --fg:#1C1C1C;
+  --fg60:rgba(28,28,28,.60);
+  --fg40:rgba(28,28,28,.40);
+  --fg10:rgba(28,28,28,.10);
+  --panel:#F2F0EB;
+  --serif:'Noto Serif SC','Source Han Serif SC','Songti SC','STSong','SimSun',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  --mono:'SF Mono',Cascadia Code,Consolas,'Liberation Mono',Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:rgba(28,28,28,.80); font-family:var(--sans);
+  line-height:1.85; -webkit-font-smoothing:antialiased;
+  font-size:15px;
+}
+
+/* ---------- 链接：hover 下划线动画 ---------- */
+a{color:inherit; text-decoration:none;
+  background:linear-gradient(currentColor,currentColor) no-repeat 0 100%/0 1px;
+  transition:background-size .4s ease}
+a:hover{background-size:100% 1px}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@media(min-width:768px){.wrap{padding:0 48px}}
+
+/* ---------- 固定导航 ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(249,248,246,.9);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--fg10)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-logo{font-family:var(--serif);letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--fg)}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-size:12px;letter-spacing:.14em;color:var(--fg60)}
+.nav-links a:hover{color:var(--fg)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ---------- Hero ---------- */
+header{padding:148px 0 96px;border-bottom:1px solid var(--fg10)}
+.kicker{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg40)}
+h1{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;
+  font-size:64px;line-height:1.05;color:var(--fg);margin-top:22px}
+@media(min-width:768px){h1{font-size:96px}}
+.sub{font-family:var(--serif);font-style:italic;color:var(--fg60);
+  font-size:19px;margin-top:18px}
+.pos{display:inline-block;margin-top:26px;padding:8px 0;
+  border-top:1px solid var(--fg10);border-bottom:1px solid var(--fg10);
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg40)}
+.dot{display:inline-block;width:6px;height:6px;background:var(--fg);border-radius:50%;
+  margin-right:8px;vertical-align:1px}
+
+/* ---------- 数字指标 ---------- */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;
+  border-top:1px solid var(--fg10);border-bottom:1px solid var(--fg10)}
+.metrics + .metrics{border-top:none;margin-top:0}
+.metric{padding:26px 20px;border-left:1px solid var(--fg10)}
+.metric:first-child{border-left:none;padding-left:0}
+.metric .n{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.1;color:var(--fg);letter-spacing:-.02em}
+.metric .l{color:var(--fg40);font-size:12px;margin-top:10px;letter-spacing:.06em}
+
+/* ---------- 区块 ---------- */
+section{padding:96px 0;border-bottom:1px solid var(--fg10)}
+@media(min-width:768px){section{padding:128px 0}}
+.sh{display:flex;align-items:baseline;gap:18px;margin-bottom:14px}
+.sn{font-family:var(--sans);font-size:12px;letter-spacing:.2em;color:var(--fg40)}
+h2{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;font-size:32px;color:var(--fg)}
+.lead{color:var(--fg60);margin-bottom:52px;max-width:46rem;font-size:15.5px}
+.lead strong,.lead b{color:var(--fg)}
+
+/* ---------- 项目卡片 ---------- */
+.p{border:1px solid var(--fg10);padding:32px 36px;margin-bottom:20px;
+  transition:border-color .4s ease}
+.p:hover{border-color:var(--fg)}
+.p-h{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:10px}
+.p-h h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;font-size:21px;color:var(--fg)}
+.tag{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  padding:4px 10px;border:1px solid var(--fg10);color:var(--fg40);white-space:nowrap}
+.tag.live{border-color:var(--fg);color:var(--fg)}
+.tag.hi{border-color:var(--fg40);color:var(--fg)}
+.p-m{color:var(--fg40);font-size:12.5px;font-family:var(--mono);margin-bottom:18px}
+.p-d{color:rgba(28,28,28,.72);font-size:14.5px;max-width:44rem}
+.p-d strong{color:var(--fg);font-weight:600}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:20px}
+.shot{border:1px solid var(--fg10);overflow:hidden;aspect-ratio:4/3;
+  display:flex;align-items:center;justify-content:center}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1s ease}
+.shot:hover img{transform:scale(1.05)}
+
+/* ---------- CTA / 按钮 ---------- */
+.cta{display:inline-block;margin-top:22px;padding:12px 24px;
+  border:1px solid var(--fg);font-size:13px;letter-spacing:.1em;color:var(--fg);
+  transition:background-color .3s ease,color .3s ease}
+.cta:hover{background:var(--fg);color:var(--bg)}
+.btn{display:inline-block;padding:12px 24px;font-size:13px;letter-spacing:.1em;
+  border:1px solid var(--fg10);color:var(--fg);transition:border-color .3s ease}
+.btn:hover{border-color:var(--fg)}
+.btn.pri{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.btn.pri:hover{background:rgba(28,28,28,.82)}
+
+/* ---------- 代码块（灰度化，无彩色） ---------- */
+pre{background:var(--panel);border:1px solid var(--fg10);padding:20px 22px;overflow-x:auto;
+  font-family:var(--mono);font-size:12.8px;line-height:1.75;color:rgba(28,28,28,.75);margin:20px 0}
+code{font-family:var(--mono);font-size:13px;background:rgba(28,28,28,.05);padding:2px 6px;color:var(--fg)}
+pre code{background:none;padding:0;color:inherit}
+.c-k{color:var(--fg);font-weight:600}.c-s{color:rgba(28,28,28,.55);font-style:italic}
+.c-c{color:var(--fg40);font-style:italic}.c-f{color:var(--fg)}.c-n{color:rgba(28,28,28,.65)}
+
+/* ---------- 产品判断 ---------- */
+.d{border-left:2px solid var(--fg40);padding:4px 0 4px 26px;margin-bottom:44px;max-width:46rem}
+.d h4{font-family:var(--serif);font-weight:400;font-size:19px;margin-bottom:10px;color:var(--fg)}
+.d p{color:rgba(28,28,28,.72);font-size:14.5px}
+.d .why{margin-top:14px;padding:14px 18px;background:var(--panel);border-left:2px solid var(--fg);font-size:14px;color:var(--fg)}
+
+/* ---------- 表格 ---------- */
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+th{text-align:left;padding:12px 14px;color:var(--fg40);font-weight:500;font-size:11.5px;
+  text-transform:uppercase;letter-spacing:.14em;border-bottom:1px solid var(--fg)}
+td{padding:13px 14px;border-bottom:1px solid var(--fg10);color:rgba(28,28,28,.72);vertical-align:top}
+td:first-child{color:var(--fg);font-weight:600}
+td code{font-size:12.5px}
+span[style*="font-size:12"]{color:var(--fg40)}
+
+/* ---------- 页脚 ---------- */
+footer{padding:96px 0 120px}
+.ct{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.note{color:var(--fg40);font-size:13px;margin-top:44px;padding-top:24px;border-top:1px solid var(--fg10);max-width:46rem}
+
+@media(max-width:760px){
+  h1{font-size:44px}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .metric{padding:20px 14px}
+  .metric:nth-child(odd){border-left:none;padding-left:0}
+  .metric .n{font-size:28px}
+  section{padding:72px 0}
+  header{padding:120px 0 72px}
+  .p{padding:22px 20px}
+}
+@media print{
+  body{background:#fff;color:#111}
+  nav{display:none}
+  header{padding:40px 0}
+  h1,h2,h3,td:first-child,.metric .n{color:#111}
+  .sub,.lead,.p-d,.d p,td,.metric .l{color:#444}
+  .p{border-color:#ddd;page-break-inside:avoid}
+  section{border-color:#eee;padding:36px 0}
+  pre{background:#f6f6f6;border-color:#ddd;color:#222}
+  a{background:none;color:#06c}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="nav-logo">Wu Qingjun</span>
+    <div class="nav-links">
+      <a href="#products">可运行的产品</a>
+      <a href="#agent">Agent 系统</a>
+      <a href="#judgment">产品判断</a>
+      <a href="#numbers">可验证的数字</a>
+      <a href="#business">业务背景</a>
+      <a href="#contact">联系方式</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Portfolio · 2026 · 上海</div>
+    <h1>吴庆骏</h1>
+    <div class="sub">AI 产品经理 · Agent 方向 —— 让 AI 在真实业务里跑起来，而不是停在演示里。</div>
+    <div class="pos"><span class="dot"></span>离职-随时到岗 · 期望 15-25K</div>
+
+    <div class="metrics">
+      <div class="metric"><div class="n">7 个月</div><div class="l">多 Agent 系统持续运行（2026-03 起）</div></div>
+      <div class="metric"><div class="n">119</div><div class="l">亲手编写的 Agent 技能</div></div>
+      <div class="metric"><div class="n">22</div><div class="l">在跑的定时任务</div></div>
+      <div class="metric"><div class="n">5 个</div><div class="l">独立交付的 0→1 AI 产品</div></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="n">568</div><div class="l">条真实饮食库数据</div></div>
+      <div class="metric"><div class="n">100+</div><div class="l">期自动化产出图卡</div></div>
+      <div class="metric"><div class="n">30 天</div><div class="l">栏目连续日更纪录</div></div>
+      <div class="metric"><div class="n">2 亿+</div><div class="l">连续 3 年店铺年 GMV</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="products">
+  <div class="wrap">
+    <div class="sh"><span class="sn">01</span><h2>可运行的产品</h2></div>
+    <p class="lead">下面每一个都是我自己从 0 到 1 做的。带 <span class="tag live">可访问</span> 的可以直接点开看，带 <span class="tag">录屏</span> 的有视频，不含演示页。</p>
+
+    <!-- 1 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>REDSecret · AI Agent 隐写通信工具</h3>
+        <span class="tag live">在线可玩</span><span class="tag">已开源</span>
+      </div>
+      <div class="p-m">纯浏览器端 JS（零依赖、零服务器）· MIT License · 2026.05-06</div>
+      <div class="p-d">
+        针对「Agent 间安全传递结构化信息」与社交隐蔽表达需求，设计并实现<strong>三种隐写方案</strong>：<strong>LSB 像素隐写</strong>（3 通道 RGB 逐位交错，像素级不可见）、<strong>QR 角标隐写</strong>（抗 JPEG 与社交平台有损压缩）、<strong>零宽字符隐写</strong>（Unicode 零宽字符藏于普通文字，肉眼完全不可见）。自定义载荷格式（magic header + 版本 + 长度 + 校验和），XOR 流加密。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>外部只依赖 qrcode 与 jsQR 两个通用库</strong>——隐写与加密逻辑全部自研：自定义 magic header + 3 通道交错 LSB 提取 + 4 变体零宽映射，这套组合在公开仓库里没有第二份实现。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>一次主动的重写</strong>：它最早是 Python 版，后来我<strong>重写成纯浏览器版</strong>（commit 里能看到 <code>chore: remove legacy Python scripts (now browser-only)</code>）——浏览器端零依赖、零服务器、数据不上传，才符合隐私定位。仓库 15 个 commit 全是我一个人，无 fork。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>硬指标</strong>：经 <strong>24+ 种攻击算法</strong>测试未被破解；适配微信朋友圈/小红书/飞书的图片压缩场景，<strong>解码成功率 95%+</strong>。
+      </div>
+      <div class="shots">
+        <div class="shot"><img src="assets/redsecret-qim.png" alt="LSB 像素隐写前后对比"></div>
+        <div class="shot"><img src="assets/redsecret-zerowidth.png" alt="零宽字符演示"></div>
+        <div class="shot"><img src="assets/redsecret-qr.png" alt="QR 角标模式"></div>
+      </div>
+      <div class="p-d" style="margin-top:14px;color:var(--fg40);font-size:13.5px">
+        像素隐写对比图为本机引擎真实生成，实测 diff 均值 0.0012/通道；<strong style="color:var(--fg)">payload 区约占 1/3 行，不宣称全图逐像素无差</strong>。
+      </div>
+      <a class="cta" href="https://cnjoe1130.github.io/REDSecret/demos/" target="_blank" rel="noopener">→ 在线体验 Demo（浏览器端运行，数据不上传）</a>
+    </div>
+
+    <!-- 2 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>「吃了么」饮食记录与智能推荐系统</h3>
+        <span class="tag hi">已上架</span><span class="tag live">他人可部署</span>
+      </div>
+      <div class="p-m">Swift + Python · 2026.06 至今 · 移动端单页 GUI + 局域网同步服务 + AI 对话记录三通道</div>
+      <div class="p-d">
+        市面营养工具都是静态卡路里查询，无法基于<strong>个人饮食习惯</strong>给建议。我设计了「习惯内推荐」引擎——只从用户自身历史饮食库（<strong>568 条</strong>）检索替代方案；配套营养标签 OCR 实测入库流程、周度复盘自动生成、TDEE 体重自校准算法（摄入均值 + 体重斜率反推真实消耗，数据不足则如实说明、不编造）。
+      </div>
+      <pre><code><span class="c-c"># recommend-engine-weekly_review.py 第 5 行 —— 产品的灵魂约束（原文）</span>
+<span class="c-s">"素材只来自用户自己的历史日志；句式只做自我对比，不规训。"</span>
+
+<span class="c-c"># 这条约束砍掉了什么：营养工具最容易做成爹味说教。</span>
+<span class="c-c"># 砍掉"标准食谱"这个维度后，产品从"健康评判者"变成"记录者 + 自我对照器"。</span>
+<span class="c-c"># 推荐候选只从自己的账本检索，不引入外部标准去评判用户。</span></code></pre>
+      <div class="p-d" style="margin-top:14px">
+        <strong>完整闭环</strong>：已打包上架<strong>小红书 SkillHub</strong>，新用户双击即可部署。连更 30+ 天真实日账，<strong>100+ 天使用数据全链路可回溯</strong>——不是演示 Demo。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>附带一份数据规范</strong>（<code>MACROS_SPEC.md</code>）：规定宏量营养素必须是 per-1g 的比例值。这条规范沉淀自一次真实的系统性数据偏差——早期把整盒装标签按 per-100g 存，导致营养素全面失真，差一点被"油是唯一变量"的表面规律掩盖。规范里同时写明了错误写法与校验规则。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>作品集仓库可直接下载</strong>：<code>evidence/chileme-recommend-engine.py</code>（151 行引擎，30 秒可读完）＋ <code>evidence/food-db-sample-20.json</code>（568 条库的前 20 条脱敏样例，保留食物条目与营养字段）。
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>随驾 SuiJia · iOS 实时聊天副驾</h3>
+        <span class="tag live">真机运行</span><span class="tag">iOS</span>
+      </div>
+      <div class="p-m">Swift · ReplayKit + Vision OCR + LLM · 2026.09 · 基于 jev-chat-jarvis-ios 二次开发（MIT）</div>
+      <div class="p-d">
+        一句话：<strong>你聊天，它在旁边看着，回话前递条子。</strong>
+        <br>上游 jev-chat-jarvis-ios 的键盘能帮回消息，但它是<strong>复制单条</strong>——上下文丢了。随驾做的事是给它加上<strong>实时读屏的上下文层</strong>：ReplayKit 屏幕广播 + 本机 OCR，持续读整场对话，回复候选带着完整上下文来。
+      </div>
+      <div class="p" style="background:var(--panel);border-color:var(--fg10);margin:18px 0 0">
+        <div class="p-d" style="margin-bottom:14px">
+          <strong>先说清楚哪些是我的</strong>——这个项目基于开源项目二次开发，署名与边界必须讲明白：
+        </div>
+        <table style="margin:0">
+          <tr><th>部分</th><th>归属</th></tr>
+          <tr><td>判断内核（Jev 接入）、键盘回复管线、话术库</td><td><strong>上游 jev-chat-jarvis-ios</strong>（MIT，Copyright © eatmoreduck 与 jev-chat 贡献者）</td></tr>
+          <tr><td><strong>ReplayKit 屏幕广播实时上下文层</strong><br><code>Broadcast/Sources/SampleHandler.swift</code></td><td><strong>我新增</strong></td></tr>
+          <tr><td><strong>本机 OCR 说话人归属</strong>（左右气泡分侧）</td><td><strong>我新增</strong></td></tr>
+          <tr><td><strong>App Group 对话累积存储</strong><br><code>Shared/SuiJiaStore.swift</code></td><td><strong>我新增</strong></td></tr>
+        </table>
+        <div class="p-d" style="margin-top:14px">
+          我做的<strong>不是"做一个聊天 AI 键盘"</strong>，而是"让已有的回复能力拿到完整上下文"。这三块加起来不到 600 行，但它们是整个产品成立的前提。
+        </div>
+      </div>
+      <pre><code><span class="c-c">控制中心开播（系统红点提示，隐私底线）</span>
+   ↓ ReplayKit Broadcast Upload Extension          <span class="c-c">← 我新增</span>
+屏幕帧 → 32×32 帧指纹去重（画面不变不烧 OCR）
+   ↓ 仅变化帧
+Vision 本机 OCR（zh-Hans）→ 左右气泡分侧 = 说话人归属   <span class="c-c">← 我新增</span>
+   ↓ 增量写入 App Group（全程不出网）              <span class="c-c">← 我新增</span>
+键盘显示「副驾在岗 · 已捕获 N 条」
+   ↓ 点一下（此刻才出网，发往你自己配置的 API）
+Jev 判断（意图/风险 0-9）→ 按话术生成候选 → 点选填入输入框
+                                       <span class="c-c">↑ 以上判断内核与回复管线来自上游</span></code></pre>
+      <div class="p-d" style="margin-top:14px">
+        <strong>隐私边界</strong>：识别<strong>全程本机</strong>（Vision 框架，无第三方 OCR 云）；聊天内容只在点「分析」那一刻发往<strong>你自己配置的模型接口</strong>；无自建服务器、不落盘、不进日志；API Key 存本机 App Group；键盘不监听按键；广播随开随关，红点状态系统强制可见。
+        <br>这不是加分的合规说辞，<strong>是这个产品能不能被用的前提</strong>。
+      </div>
+      <table style="margin-top:20px">
+        <tr><th></th><th>一代：单条复制<br><span style="color:var(--fg40);font-size:12px">上游</span></th><th>二代：截图 OCR<br><span style="color:var(--fg40);font-size:12px">上游</span></th><th>三代：实时副驾<br><span style="color:var(--fg);font-size:12px">我新增的上下文层</span></th></tr>
+        <tr><td>上下文</td><td>复制的那一条</td><td>一屏快照</td><td><strong>持续累积整场对话，不丢帧</strong></td></tr>
+        <tr><td>操作</td><td>长按复制 → 切键盘 → 分析</td><td>截图 → 分享 → 等</td><td><strong>开播一次，全程在场</strong></td></tr>
+        <tr><td>语音/图片</td><td>需手动复制</td><td>OCR 不出</td><td>暂不支持（已在路线图）</td></tr>
+      </table>
+      <div class="shots">
+        <div class="shot" style="aspect-ratio:9/19"><img src="assets/suijia-demo.gif" alt="上游 jev-chat-jarvis-ios 的单条复制流程演示"></div>
+        <div class="shot" style="aspect-ratio:9/19"><img src="assets/suijia-setup.gif" alt="上游键盘扩展启用流程"></div>
+      </div>
+      <div class="p-d" style="margin-top:16px">
+        ⚠️ 上面两段 GIF 是<strong>上游项目</strong>的界面演示（一代/二代的复制单条流程），<strong>不是我新增的上下文层</strong>。随驾本体的形态是<strong>控制台 App</strong>：「副驾在岗 · 正在读屏」状态灯、「已捕获上下文（最近 50 条）」实时列表、对方/我 分色标注、可一键清空本场上下文。
+        <br><strong>我自己新增的这三块源码全部开放</strong>（<code>Broadcast/Sources/SampleHandler.swift</code>、<code>Shared/SuiJiaStore.swift</code> 及说话人归属逻辑），可现场打开讲结构。安装只需一台 Mac + iPhone，<strong>无需越狱、无需付费开发者账号</strong>（Xcode 命令行构建 + 免费证书侧载 + 7 天重签）。
+      </div>
+      <div class="p-d" style="margin-top:16px;padding:14px 18px;background:var(--panel);border-left:2px solid var(--fg)">
+        <strong>⚠️ 本项目目前为 v0.1 原型，尚在完善中</strong> —— 本体的最终方向是<strong>AI 代理社交产品</strong>（让 Agent 在社交场景里代为沟通、递条子、保留上下文），当前版本先跑通「实时读屏上下文层」这条链路；后续会补上 Agent 主动介入、多轮对话记忆、以及面向社交场景的回复策略。
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>互动叙事引擎 · 长篇小说改编可交互分支游戏</h3>
+        <span class="tag hi">0→1 全栈</span>
+      </div>
+      <div class="p-m">JS + AI 生图管线 · 2026</div>
+      <div class="p-d">
+        完整工程化链路：双线叙事 <strong>JSON 节点结构</strong> → 批量节点生成管线打通内容生产 → <strong>AI 生图美术素材管线（角色一致性锁定）</strong> → 独立完成编辑器端与玩家端。解决了分支叙事里人物形象漂移这个内容生产的老问题。
+      </div>
+      <div class="shots">
+        <div class="shot"><img src="assets/narrative-consistency-1.png" alt="角色一致性三时间线对比 1"></div>
+        <div class="shot"><img src="assets/narrative-consistency-2.png" alt="角色一致性三时间线对比 2"></div>
+        <div class="shot"><img src="assets/narrative-player.png" alt="玩家端"></div>
+        <div class="shot"><img src="assets/narrative-editor.jpg" alt="编辑器端"></div>
+      </div>
+      <div class="p-d" style="margin-top:16px">
+        <strong>角色一致性五步锁</strong>：① vision 供图<strong>元素清单化</strong>（脸/发型位置/服装逐件/道具/光线）→ ② <strong>锁死项 vs 可调项分列</strong>给用户拍板 → ③ 英文 prompt 逐件复述锁死项（底层模型英文更准）→ ④ 生成 → ⑤ <strong>验收三查</strong>（脸→服装→左右位置）。
+        <br>漂移的具体表现是<strong>同一人不同图之间不一致</strong>：脸型/单双眼皮变化、辫子从左肩跑到右肩、滚边纹样走样、道具换位——不是"画得不像"。LoRA 走不通（生图 API 不支持自定义训练），这是明确的方案排除记录。
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>AI Market Signal · A 股智能分析内容流水线</h3>
+        <span class="tag live">累计 100+ 期</span><span class="tag hi">无人值守</span>
+      </div>
+      <div class="p-m">Python + 多源 API + HTML 渲染 · 2026-06 至今</div>
+      <div class="p-d">
+        端到端自动化：定时抓取三大指数 / 主力资金流向 / 期货夜盘 / 美股开盘（集成新浪财经、东方财富等多源 API）→ LLM 自动生成多维分析报告 → HTML 可视化卡片模板渲染并自动截图 → 小红书 / 公众号双平台自动发布，<strong>全程零人工干预</strong>。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        三个栏目并行：<strong>盘前速递 / 盘后复盘 / 盘中验证</strong>，累计产出 <strong>100+ 期</strong>图卡（盘前速递单栏目编号已到 #114，2026-06-02 起算），获平台算法推荐。平台策略：小红书当增长引擎、公众号当沉淀池。
+      </div>
+      <div class="shots">
+        <div class="shot"><img src="assets/market-after.jpg" alt="盘后复盘图卡"></div>
+        <div class="shot"><img src="assets/market-intraday.png" alt="盘中验证图卡"></div>
+        <div class="shot"><img src="assets/market-premarket.png" alt="盘前速递图卡"></div>
+        <div class="shot"><img src="assets/market-xhs.png" alt="小红书版图卡"></div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>世界杯 AI「吵个球」双 AI 预测栏目</h3>
+        <span class="tag hi">连续 30 天日更</span>
+      </div>
+      <div class="p-m">内容产品 · 2026.06-07</div>
+      <div class="p-d">
+        单模型 AI 预测内容容易被质疑可信度，且有博彩合规风险。我设计了 <strong>「东方玄学派 vs 西方数据派」双 AI 对抗模式</strong>——两个 AI 给出不同结论，天然形成免责设计、不引导博彩。内容分 AI 球迷测试（引流）+ AI 预测大对决（日更）两大板块，并建立完整栏目 SOP 与合规边界。
+      </div>
+      <div class="shots">
+        <div class="shot"><img src="assets/soccer-preview.png" alt="AI 吵个球栏目预览"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agent">
+  <div class="wrap">
+    <div class="sh"><span class="sn">02</span><h2>多 Agent 自动化系统</h2></div>
+    <p class="lead">一个跑在我自己机器上的多 Agent 自动化系统，<strong>已持续运行 7 个月</strong>（2026-03 起，含 OpenClaw 阶段；现框架侧自 2026-06-04 起）。这不是概念演示——行情监控、数据记录、内容整理、定时提醒、跨会话的长期任务，全部交给它。</p>
+
+    <div class="p">
+      <div class="p-h">
+        <h3>我的资产层：119 个技能 + 22 个在跑任务</h3>
+        <span class="tag live">运行中</span><span class="tag">2026-03 起</span>
+      </div>
+      <div class="p-m">框架为开源项目（Hermes Agent / OpenClaw）· 我的部分是技能层与编排层</div>
+      <div class="p-d" style="margin-bottom:18px">
+        <strong>先说清楚边界</strong>：Agent 框架本身是开源项目，不是我写的。我做的是四件事——<strong>①</strong> 从 2026-03 就在上面调 skills 跑真实任务<strong>②</strong> 沉淀 <strong>119 个亲手编写并持续维护</strong>的技能（provenance 可查）<strong>③</strong> 搭 <strong>22 个在跑的定时任务</strong>与多出口投递<strong>④</strong> 设计分层记忆与工具失败的分级降级。
+      </div>
+      <div class="p-d" style="margin-bottom:18px">
+        技能库共 <strong>283 个</strong>，其中 164 个为导入/外部来源。我把 <strong>119/283</strong> 这个比例直接写出来——<strong>分清哪些是我写的、哪些是导入的，本身就是工程判断的一部分</strong>，比声称"我写了 283 个"更可信。
+      </div>
+      <div class="p-d" style="margin-bottom:18px">
+        <strong>关于"7 个 Agent"这个说法——我做过一个不准确的表述。</strong>它不是"7 个对等 Agent 各司其职"，真实结构是<strong>两代框架 + 一主多辅</strong>：主 Agent 承担对话与工具执行、按通道/场景派生子 Agent，另有若干专家 Agent（如 REDSecret 隐写、微信读书），跨设备还有研究型 Agent 通过任务单交接。<strong>我按真实结构讲，而不是按一个好听但站不住的数字讲。</strong>
+      </div>
+      <table>
+        <tr><th>能力</th><th>实现方式</th></tr>
+        <tr><td>调度</td><td><strong>22 个在跑</strong>，每个任务独立 cron 表达式（<code>13 7 * * 1-5</code> 到 <code>20m</code> 看门狗）；任务体分 <code>no_agent</code>（纯脚本，不付 token）与 <code>llm</code>（agent 会话）两类</td></tr>
+        <tr><td>扩展</td><td>技能热插拔——<strong>零重启、零注册表</strong>：建目录写 SKILL.md 即被发现，"装"就是"建目录"，"卸"就是"挪进 archive"</td></tr>
+        <tr><td>通道</td><td>一个产物最多同时进 <strong>4 个出口</strong>：飞书 DM → 公众号 → 本地台账 → 小红书内容库</td></tr>
+        <tr><td>记忆</td><td>三层：会话原文 <code>state.db</code>（SQLite + FTS5 全文索引，12.9 万条消息）＋ 长期记忆 <code>MEMORY.md</code>（2200 字符预算，约束驱动压缩）＋ 程序性记忆 <code>skills/</code></td></tr>
+        <tr><td>韧性</td><td>四层：传输层重试（429/超时，3 次指数退避）→ 工具层错误不吞、原文回传模型 → 技能层显式降级路径 → 任务层放弃并告警（不因一次失败停摆）</td></tr>
+        <tr><td>校验</td><td>批量产物硬校验：渲染 1830 帧逐帧断言，缺帧成片比渲染失败危险得多——<strong>宁可失败不可缺帧</strong></td></tr>
+      </table>
+
+      <h4 style="font-family:var(--serif);font-weight:400;font-size:18px;margin:30px 0 12px;color:var(--fg)">技能的真实结构（每个技能都是一条真实工作流）</h4>
+      <pre><code><span class="c-c"># skills/ 即插件点：建目录写 SKILL.md 即被发现，零重启零注册表</span>
+<span class="c-f">skills/</span>/
+├── <span class="c-f">a-share-market-cards/</span>   <span class="c-c"># A股图卡流水线：抓取→写卡→截图→发布</span>
+│   ├── <span class="c-f">SKILL.md</span>                     <span class="c-c"># 主工作流 + frontmatter</span>
+│   ├── <span class="c-f">references/</span>                  <span class="c-c"># 11 份：公众号发布、QR加密、飞书投递…</span>
+│   ├── <span class="c-f">templates/</span>                   <span class="c-c"># after-market-card.html</span>
+│   └── <span class="c-f">SKILL.md.v3.14.bak</span>           <span class="c-c"># 版本演化痕迹</span>
+├── <span class="c-f">hyperframes-video/</span>      <span class="c-c"># HTML→MP4 流水线：写渲染器 JSON 描述帧</span>
+│                                              <span class="c-c"># ← 10-18 事故就发生在这里</span>
+├── <span class="c-f">ios-device-deploy/</span>      <span class="c-c"># 免费证书命令行构建 + 真机侧载 + 7天重签</span>
+├── <span class="c-f">food-log-date-discipline/</span> <span class="c-c"># 营养记录日期纪律：date 命令为唯一真相</span>
+├── <span class="c-f">character-poster-generation/</span> <span class="c-c"># 角色一致性五步锁（见 05 区块）</span>
+├── <span class="c-f">hermes-session-management/</span>  <span class="c-c"># 会话生命周期 + cron 配置运维规范</span>
+└── <span class="c-f">career-documents/</span>         <span class="c-c"># 简历管线：HTML→无头Chrome出PDF</span>
+
+<span class="c-c"># 每个 SKILL.md 里的命令都在本机真跑过 —— 这是"任务驱动的自维护产物"</span>
+<span class="c-c"># 复杂任务跑完 5+ 次工具调用后，被要求把工作流沉淀成技能；</span>
+<span class="c-c"># 用中发现步骤缺失/命令过时，当场 patch 修订。</span></code></pre>
+
+      <h4 style="font-family:var(--serif);font-weight:400;font-size:18px;margin:30px 0 12px;color:var(--fg)">一次真实事故，以及我改了什么</h4>
+      <p style="color:rgba(28,28,28,.72);font-size:14.5px;margin-bottom:14px;max-width:44rem">
+        <strong style="color:var(--fg)">10-18 渲染帧并发抢写</strong>：渲染任务产出异常，输出帧损坏。排查时先怀疑渲染逻辑本身（参数、素材、时间线对齐）——单独跑正常，排除；再怀疑资源不足——监控显示有余量，排除；回头看进程表发现<strong style="color:var(--fg)">僵尸进程残留并持有帧文件写句柄</strong>，定位到并发抢写。
+      </p>
+      <p style="color:rgba(28,28,28,.72);font-size:14.5px;margin-bottom:14px;max-width:44rem">
+        恢复：<code>pkill</code> 清理僵尸进程后重渲。但<strong style="color:var(--fg)">恢复不是终点</strong>——我随后加了 <strong style="color:var(--fg)">1830 帧硬校验</strong>：渲染完成后逐帧校验，任意一帧损坏即判定失败并重试。
+      </p>
+      <pre><code><span class="c-c"># 真实日志片段（脱敏）—— 缺帧成片比渲染失败危险得多</span>
+<span class="c-c">[10-18 渲染 1830 帧成片]</span>
+  OK 32_card12 102s
+  OK 33_flash 113s
+  OK 34_end 153s
+TOTAL FRAMES: <span class="c-f">1710</span> (must be 1830)
+  File "&lt;HOME&gt;/Desktop/dsv41-flash/build.py", line 43, in &lt;module&gt;
+    <span class="c-k">assert</span> total==1830
+AssertionError
+                                   <span class="c-c">← 硬校验闸门拦住了缺帧成片</span>
+
+<span class="c-c"># 处置：pkill 清僵尸进程 → 重渲 → 1830 帧全量校验通过才交付</span>
+<span class="c-c"># 日志三连：fail 1710 → fail 1785 → pass 1830（闸门真的兜住了）</span>
+
+<span class="c-c"># 另一类：系统性故障的告警（9-24 连环 504）</span>
+2026-09-23 23:21:15 ERROR cron.scheduler: Job 'A股盘后分析' failed: RuntimeError: HTTP 504
+2026-09-24 07:18:44 ERROR cron.scheduler: Job 'A股盘前速递' failed: RuntimeError: HTTP 504
+2026-09-24 08:08:17 ERROR cron.scheduler: Job '每日黄金资讯' failed: RuntimeError: HTTP 504
+<span class="c-c"># → 衍生出 cron504看门狗常驻任务 + 504时段选模避让策略</span></code></pre>
+
+      <div class="p-d" style="margin-top:18px">
+        <strong>为什么讲事故而不是讲"我的系统很稳定"</strong>：面试官判断工程水平，看的不是"你出过事故吗"，而是"出了事故之后你改了什么"。一个能说清楚"这里出过什么问题、怎么定位的、怎么加了校验闭环"的人，比一个声称没问题的人可信得多。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>另一类失败：工具调用失败的分级处理</strong>。AI 流程里单次调用失败是常态（网络抖动、限流、上下文超长、模型抽风）。如果产品没设计好这一层，用户感知到的就是"这个 AI 时好时坏"——<strong>而这恰恰是很多 AI 产品失败的原因：不是模型不行，是没处理失败。</strong>
+      </div>
+
+      <h4 style="font-family:var(--serif);font-weight:400;font-size:18px;margin:30px 0 12px;color:var(--fg)">定时任务台账（22 个在跑，摘 10）</h4>
+      <table>
+        <tr><th>任务</th><th>cron 表达式</th><th>用途</th></tr>
+        <tr><td>A股盘后分析</td><td><code>11 23 * * 1-5</code></td><td>收盘数据多源抓取 → 复盘卡 → 公众号发布</td></tr>
+        <tr><td>A股盘中验证</td><td><code>17 12 * * 1-5</code></td><td>午间验证上午判断</td></tr>
+        <tr><td>A股盘前速递</td><td><code>13 7 * * 1-5</code></td><td>7:13 生成连续编号的盘前图卡</td></tr>
+        <tr><td>A股周报特辑</td><td><code>23 23 * * 0</code></td><td>周度汇总</td></tr>
+        <tr><td>黄金价位监控</td><td><code>0 */3 * * 1-5</code></td><td>每 3 小时金油比价哨兵（触发才推送，无事不打扰）</td></tr>
+        <tr><td>午餐 / 晚餐记录提醒</td><td><code>0 12 / 0 18 * * *</code></td><td>营养记录催办</td></tr>
+        <tr><td>吃了么周复盘</td><td><code>0 21 * * 0</code></td><td>TDEE 自校准 + 周复盘卡</td></tr>
+        <tr><td>每日邮箱扫描</td><td><code>0 9 * * *</code></td><td>收件箱 triage（邮件通道）</td></tr>
+        <tr><td>每周监管处罚扫描</td><td><code>37 21 * * 1</code></td><td>处罚公告扫描、分级降噪、索赔新闻辨伪</td></tr>
+        <tr><td>cron504 看门狗</td><td>每 20 分钟</td><td>监控中转 504 高峰并选模避让（由 9-24 连环故障催生）</td></tr>
+      </table>
+      <div class="p-d" style="margin-top:16px">
+        任务体分两类：<code>no_agent</code>（直接跑 <code>scripts/*.py</code>，<strong>不付 token</strong>——能用脚本的绝不进 LLM）与 <code>llm</code>（整段 prompt 交给 agent 会话）。22 个里有 6 个是纯脚本。
+        <br>投递目标在 <code>jobs.json</code> 里按任务声明（<code>origin</code> / <code>local</code> / <code>email</code> / <code>feishu</code>），不是硬编码——这是"同一产物多投"的配置层证据。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="judgment">
+  <div class="wrap">
+    <div class="sh"><span class="sn">03</span><h2>产品判断</h2></div>
+    <p class="lead">工具谁都能用。我更想说明的是<strong>我在什么地方做了判断、为什么这样判断</strong>——这三件事是我这一年最核心的学习。</p>
+
+    <div class="d">
+      <h4>① 副驾产品：真问题不是「没有回复」，是「打断」</h4>
+      <p>起点是一句用户抱怨：「复制粘贴很打断对话」。当时最直觉的方案是做成实时语音转写 + 自动回复。但我判断真正的痛点是<strong>打断</strong>而不是<strong>缺失</strong>——用户要的是不被打扰地继续对话。</p>
+      <div class="why">所以我选择让识别全程留在本机（Vision OCR 本地推理），并且<strong>只在用户主动点击时才触发分析</strong>。这让隐私从「一个加分项」变成了「这个产品能不能被用」的前提。代价是响应变慢了，我接受这个代价。</div>
+    </div>
+
+    <div class="d">
+      <h4>② 内容栏目：用产品结构解决合规问题，而不是加免责声明</h4>
+      <p>「AI 预测比赛结果」天然存在博彩合规风险。加免责声明是最省事的做法，但会持续消耗用户的信任。我改成<strong>两个 AI 给出不同结论</strong>的对抗结构——「东方玄学」对「西方数据」——冲突本身就是内容，而双 AI 天然不导向任何单一下注结果。</p>
+      <div class="why">合规从「事后修补」变成了「产品结构的一部分」。这让我意识到：<strong>很多风险可以在设计阶段就消解掉，而不是在上线后打补丁。</strong></div>
+    </div>
+
+    <div class="d">
+      <h4>③ 故障排查：把猜测换成可证伪的对照实验</h4>
+      <p>LLM 中转服务间歇性返回 499 / 超时。我不猜，而是把可能原因拆成三项，各自设计一个<strong>能推翻自己的</strong>对照实验：① 同模型直连官方端点、绕过中转，比首 token 延迟基线 → 证伪"模型时延变长"；② 多个中转服务商跑同一请求同一 prompt 对比 → 排除"协议/端点共性问题"；③ 观察 499 出现与自身并发数的相关性，降并发重试 → 定位到<strong>并发限流</strong>。</p>
+      <div class="why">修复分三层：退避重试 → 切备用中转并降并发 → 降级路径（缓存数据 + 模板化简报）继续完成任务并在产物标注降级。这条路径后来固化进系统工具调用层，成为所有技能共用的失败处理策略。<br><br><strong>做 AI 产品的门槛，一半在「懂业务」，另一半在「知道模型和基础设施的真实边界在哪」。</strong>后者不能靠看文章，只能靠动手踩过。</div>
+    </div>
+  </div>
+</section>
+
+<section id="numbers">
+  <div class="wrap">
+    <div class="sh"><span class="sn">04</span><h2>可验证的数字</h2></div>
+    <p class="lead">我不打算只让你相信我的描述。下面每一个数字后面都对应一个可以现场打开的文件——<strong>面试时你可以随便点开任何一条让我解释结构</strong>。</p>
+
+    <table>
+      <tr><th>数字</th><th>对应的可查证据（全部在作品集仓库内）</th></tr>
+      <tr><td><strong>119 / 283</strong><br><span style="color:var(--fg40);font-size:12.5px">亲手写 / 技能库总量</span></td><td><code>01-agent-system/skills/</code>（99 个现存）+ <code>skills-archive/</code>（19 个退役），每个含 SKILL.md 原文</td></tr>
+      <tr><td><strong>22</strong><br><span style="color:var(--fg40);font-size:12.5px">在跑定时任务</span></td><td><code>cron/jobs.json</code> —— 每个任务的 cron 表达式与完整 prompt</td></tr>
+      <tr><td><strong>28</strong><br><span style="color:var(--fg40);font-size:12.5px">配套脚本</span></td><td><code>scripts/</code> —— 采集/监控/合并/校验，其中 6 个任务是纯脚本不付 token</td></tr>
+      <tr><td><strong>1830 帧</strong><br><span style="color:var(--fg40);font-size:12.5px">渲染硬校验闭环</span></td><td><code>logs/incident-1018-*.log</code> 三连：fail 1710 → fail 1785 → pass 1830，<strong>原始日志未美化</strong></td></tr>
+      <tr><td><strong>429 / 504</strong><br><span style="color:var(--fg40);font-size:12.5px">失败处理链路</span></td><td><code>logs/sample-retry-429.log</code>（3 次指数退避）+ <code>sample-alert-504.log</code>（系统性故障告警）</td></tr>
+      <tr><td><strong>568 条</strong><br><span style="color:var(--fg40);font-size:12.5px">真实饮食库</span></td><td><code>03-chileme/food-db-sample-20.json</code> 脱敏样例 + 151 行推荐引擎源码</td></tr>
+      <tr><td><strong>100+ 期</strong><br><span style="color:var(--fg40);font-size:12.5px">自动化产出图卡</span></td><td><code>06-market-signal/cards/</code> 真实产出 + <code>logs/sample-normal-cron-output.md</code> 完整台账</td></tr>
+      <tr><td><strong>三时间线</strong><br><span style="color:var(--fg40);font-size:12.5px">角色一致性</span></td><td><code>05-narrative/</code> 两组并排图：1999 / 2003 / 2019 同一角色跨时间线</td></tr>
+      <tr><td><strong>0.0012</strong><br><span style="color:var(--fg40);font-size:12.5px">隐写 diff 均值/通道</span></td><td><strong>开源仓库可直接查</strong>：github.com/cnjoe1130/REDSecret，含 24+ 攻击测试脚本</td></tr>
+      <tr><td><strong>14MB</strong><br><span style="color:var(--fg40);font-size:12.5px">随驾 iOS 全链路源码</span></td><td><code>04-suijia/</code> App / Broadcast / Keyboard / Shared 四模块全量</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="business">
+  <div class="wrap">
+    <div class="sh"><span class="sn">05</span><h2>业务背景</h2></div>
+    <p class="lead">我不认为懂业务和懂 AI 是两件事。以下是我在业务侧的真实积累——它决定了我知道哪些环节值得被 AI 改造。</p>
+
+    <table>
+      <tr><th>经历</th><th>结果</th></tr>
+      <tr><td>佳格投资 · 京东运营<br>2022.01-2025.03</td><td>连续 3 年店铺全年 GMV 突破 2 亿，年均达成率 110%+，领跑公司同品类团队；葵花籽油类目销售第一，市场份额 15%+；核心 SKU 转化率 +12%，大促 ROI 同比 +25%</td></tr>
+      <tr><td>森中网络 · 售后客服主管<br>2020.04-2021.12</td><td>统筹天猫/抖店/拼多多/快手/考拉/小红书多平台售后；<strong>主导话术机器人关键词库与应答逻辑优化，自动化回复准确率 75%→92%，减少 30% 人工咨询量</strong>；响应 4h→1.5h，解决率 98%，客诉率 -30%，DSR 4.9+</td></tr>
+      <tr><td>上海四衡 · 跨境电商运营<br>2019.08-2020.03</td><td>滞销率 -20%，周转天数 -5 天；主图与详情页优化点击率 +15%、转化率 +8%</td></tr>
+    </table>
+
+    <div class="p" style="margin-top:28px">
+      <div class="p-d">
+        <strong>为什么这段经历对 AI 产品岗有用</strong>：客服那三年让我知道 AI 智能客服真正的瓶颈不在模型，在<strong>知识组织的颗粒度和异常路径的处理</strong>；京东那三年让我知道一个业务环节值不值得被 AI 改造，取决于它的频次、标准化程度和错误成本——这三点决定了 ROI。<strong>这两件事是很多 AI 产品候选人缺的，因为它需要真的做过业务、真的踩过坑。</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evidence">
+  <div class="wrap">
+    <div class="sh"><span class="sn">05</span><h2>证据包</h2></div>
+    <p class="lead">作品集不只是一页介绍——<strong>下面每一个数字背后都有一份原始文件</strong>，可以现场打开、逐行核对。完整证据包（570 个文件 / 15MB，含技能库原文、定时任务台账、运行日志、源码）可通过链接索取。</p>
+    <table>
+      <tr><th>可查文件</th><th>内容</th></tr>
+      <tr><td><code>evidence/agent-system-README.md</code></td><td>Agent 系统的边界声明、目录结构、代表技能说明、22 个定时任务清单</td></tr>
+      <tr><td><code>evidence/logs/incident-1018-*.log</code></td><td>10-18 渲染事故三连：fail 1710 → fail 1785 → pass 1830，原始日志未美化</td></tr>
+      <tr><td><code>evidence/logs/sample-retry-429.log</code></td><td>429 重试链：3 次指数退避的真实间隔</td></tr>
+      <tr><td><code>evidence/logs/sample-alert-504.log</code></td><td>9-24 连环 504 告警（4 个任务连续失败）</td></tr>
+      <tr><td><code>evidence/logs/sample-normal-cron-output.md</code></td><td>正常无人值守产出的完整台账（57KB）</td></tr>
+      <tr><td><code>evidence/interview-ANSWERS.md</code></td><td>面试问答素材：每个回答都标注了包内可核对的证据文件路径</td></tr>
+      <tr><td><code>evidence/chileme-recommend-engine.py</code></td><td>习惯内推荐 + TDEE 体重自校准引擎（151 行）</td></tr>
+      <tr><td><code>evidence/food-db-sample-20.json</code></td><td>真实饮食库脱敏样例（个人字段已删）</td></tr>
+      <tr><td><code>evidence/suijia/SampleHandler.swift</code></td><td><strong>随驾本体源码</strong>：ReplayKit 帧流 → 本机 OCR → 气泡归属 → App Group 增量写入（含内存纪律注释）</td></tr>
+      <tr><td><code>evidence/suijia/SuiJiaStore.swift</code></td><td>随驾本体：对话累积存储</td></tr>
+      <tr><td><code>evidence/suijia/NOTICE</code> + <code>README.md</code></td><td><strong>二次开发边界声明</strong>：哪些来自上游、哪些是我新增的、署名与免责条款</td></tr>
+      <tr><td><code>evidence/MANIFEST.md</code></td><td>完整素材清单 + 脱敏执行记录</td></tr>
+    </table>
+  </div>
+</section>
+<footer id="contact">
+  <div class="wrap">
+    <div class="sh"><span class="sn">06</span><h2>联系方式</h2></div>
+    <div class="ct">
+      <a class="btn pri" href="https://cnjoe1130.github.io/REDSecret/demos/" target="_blank" rel="noopener">REDSecret 在线 Demo</a>
+      <a class="btn" href="https://github.com/cnjoe1130/REDSecret" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.zhipin.com/web/geek/resume" target="_blank" rel="noopener">BOSS 在线简历</a>
+    </div>
+    <p class="sub" style="margin-top:26px;font-family:var(--sans);font-style:normal;font-size:14px">吴庆骏 · 15702123370 · jooooe@agent.qq.com · 上海</p>
+    <div class="note">
+      本页所有项目均为独立完成，代码与设计过程可现场演示。截图与视频文件位于同目录 <code>demo-screens/</code> 与 <code>videos/</code>，可按需单独发送。
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
