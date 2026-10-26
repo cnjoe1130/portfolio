@@ -232,13 +232,15 @@ footer{padding:96px 0 120px}
       <div class="p-d" style="margin-top:14px">
         <strong>硬指标</strong>：经 <strong>24+ 种攻击算法</strong>测试未被破解；适配微信朋友圈/小红书/飞书的图片压缩场景，<strong>解码成功率 95%+</strong>。
       </div>
-      <div class="shots g3">
-        <figure class="shot"><span class="cmp-label l">原图</span><span class="cmp-label r">嵌入后</span><img src="assets/redsecret-qim.png" alt="LSB 像素隐写前后对比"><figcaption><strong>LSB 像素隐写</strong>：左原图 · 右嵌入后。肉眼不可见是隐写的本分——实测 diff 均值 0.0012/通道</figcaption></figure>
-        <figure class="shot"><img src="assets/redsecret-zerowidth.png" alt="零宽字符演示"><figcaption><strong>零宽字符</strong>：两段看起来一样的文字，其中一段藏着完整信息</figcaption></figure>
-        <figure class="shot"><img src="assets/redsecret-qr.png" alt="QR 角标模式"><figcaption><strong>QR 角标</strong>：为抗 JPEG 与社交平台有损压缩设计的载体形态</figcaption></figure>
+      <div class="shots">
+        <figure class="shot"><span class="cmp-label l">宣传片 · 一</span><video controls preload="metadata" src="videos/redsecret-pixel.mp4" style="width:100%;display:block"></video><figcaption><strong>藏在像素里</strong>：1,103,200 个像素的 LSB 隐写全流程——嵌入、放大检验、解码出"我想你了"（huashu-motion 制作）</figcaption></figure>
+        <figure class="shot"><span class="cmp-label l">宣传片 · 二</span><video controls preload="metadata" src="videos/redsecret-layers.mp4" style="width:100%;display:block"></video><figcaption><strong>一张图，三层</strong>：照片 · 像素 · 密文——三层是同一个文件，少一层都读不出这句话</figcaption></figure>
       </div>
       <div class="p-d" style="margin-top:14px;color:var(--fg40);font-size:13.5px">
-        像素隐写对比图为本机引擎真实生成，实测 diff 均值 0.0012/通道；<strong style="color:var(--fg)">payload 区约占 1/3 行，不宣称全图逐像素无差</strong>。
+        两支宣传片均由自建的 <strong style="color:var(--fg)">huashu-motion 动效管线</strong>生成——和视频里演示的工具一样，产出它们的管线也是自研的。
+      </div>
+      <div class="p-d" style="margin-top:14px;color:var(--fg40);font-size:13.5px">
+        硬数据：隐写对比实测 diff 均值 <strong style="color:var(--fg)">0.0012/通道</strong>；<strong style="color:var(--fg)">payload 区约占 1/3 行</strong>，不宣称全图逐像素无差。
       </div>
       <a class="cta" href="https://cnjoe1130.github.io/REDSecret/demos/" target="_blank" rel="noopener">→ 在线体验 Demo（浏览器端运行，数据不上传）</a>
     </div>
