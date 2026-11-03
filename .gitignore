@@ -11,3 +11,7 @@ REDSecret查重核查报告.md
 evidence/interview-ANSWERS.md
 *.log
 assets/redsecret-*.png
+
+# 例外：事故/重试日志与面试问答是页面上「可验证」主张的实物，必须入库
+!evidence/logs/*.log
+!evidence/interview-ANSWERS.md

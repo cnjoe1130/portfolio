@@ -1,0 +1,57 @@
+skip 00_open
+skip 10_card1
+skip 11_s1
+OK 12_card2 4s
+skip 13_s2
+skip 14_card3
+skip 15_s3
+skip 16_card4
+skip 17_s4
+skip 18_card5
+skip 19_s5
+OK 20_card6 8s
+skip 21_s6
+skip 22_card7
+OK 23_s7 26s
+skip 24_card8
+skip 25_s8
+skip 26_card9
+skip 27_s9
+OK 28_card10 30s
+skip 29_s10
+skip 30_card11
+skip 31_s11
+skip 32_card12
+skip 33_flash
+skip 34_end
+00_open 240
+10_card1 30
+11_s1 90
+12_card2 15
+13_s2 90
+14_card3 30
+15_s3 90
+16_card4 30
+17_s4 90
+18_card5 30
+19_s5 90
+20_card6 15
+21_s6 90
+22_card7 30
+23_s7 90
+24_card8 30
+25_s8 90
+26_card9 30
+27_s9 90
+28_card10 15
+29_s10 90
+30_card11 30
+31_s11 90
+32_card12 30
+33_flash 60
+34_end 180
+TOTAL FRAMES: 1785 (must be 1830)
+Traceback (most recent call last):
+  File "<HOME>/Desktop/dsv41-flash/build.py", line 43, in <module>
+    assert total==1830
+AssertionError

@@ -191,7 +191,7 @@ footer{padding:96px 0 120px}
     <div class="kicker">Portfolio · 2026 · 上海</div>
     <h1>吴庆骏</h1>
     <div class="sub">AI 产品经理 · Agent 方向 —— 让 AI 在真实业务里跑起来，而不是停在演示里。</div>
-    <div class="pos"><span class="dot"></span>离职-随时到岗 · 期望 15-25K</div>
+    <div class="pos"><span class="dot"></span>离职-随时到岗 · 期望 15-20K</div>
 
     <div class="metrics">
       <div class="metric"><div class="n">7 个月</div><div class="l">多 Agent 系统持续运行（2026-03 起）</div></div>
@@ -390,6 +390,93 @@ Jev 判断（意图/风险 0-9）→ 按话术生成候选 → 点选填入输�
         <figure class="shot"><img src="assets/soccer-preview.png" alt="AI 吵个球栏目预览"><figcaption><strong>栏目版式</strong>：玄学派 vs 数据派的对抗结构落在版面上</figcaption></figure>
       </div>
     </div>
+
+    <!-- 7 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>求职 Agent 雷达 · 把自己的求职做成产品</h3>
+        <span class="tag live">运行中</span><span class="tag">27 轮</span>
+      </div>
+      <div class="p-m">Agent 技能 + 4 份口径文档 + 8 个脚本 · 跑在真实浏览器登录态上 · 2026.10 至今</div>
+      <div class="p-d">
+        把自己当成一个待投放的产品：一条七步流水线 <strong>环境与登录自检 → 增量扫描 → 去重筛选 → 抓 JD → 写话术 → 发送 → 只读核验 + 台账落盘</strong>，每一步都产出可复查的 JSON。<strong>判断只留在"写话术"那一步，其余全部交给脚本</strong>——临场发挥的环节，恰恰是不可靠的环节。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        硬数据：5 个入口（BOSS / 智联 / 前程无忧 / 猎聘 / 站外主动自荐）累计 <strong>327 次建联、316 次确认送达、去重 309 家公司</strong>；本地「已见公司库」<strong>627 家</strong>负责增量——第 N 轮只处理前 N-1 轮没见过的岗位，不重复骚扰同一家。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>三条我自己写进规则的硬约束</strong>：① 发送前必须先做 JD 尽调，双门槛岗（要求硬技术 + 垂直专业）直接跳过，不浪费双方时间；② <strong>话术里不写"愿意驻场 / 能出差"</strong>——生活方式条件是本人拍板项，Agent 无权替我承诺；③ 送达以回读页面为准，回读不到就重跑，不记成功。
+      </div>
+      <pre><code><span class="c-c"># 台账里的一条真实记录（本机 327 条建联 JSON 可直接打开；公司名与职位已隐去）</span>
+{"platform": "boss", "round": "r27", "name": "…", "title": "…",
+ "href": "https://www.zhipin.com/job_detail/….html",
+ "ok": <span class="c-k">true</span>, "status": "已建联✅", "src": "jobs-20261103-1455"}
+
+<span class="c-c"># 一轮的产物是 18 个文件：raw-jobs / fresh / candidates-fresh / details / targets-*-jd</span>
+<span class="c-c"># / send-*-result / verify / check-threads / 台账-第N轮.md …</span>
+<span class="c-c"># 换设备接手的红线：本机禁止跑 build-baseline.cjs —— 它整表重写基线，</span>
+<span class="c-c"># 轮次目录没跟过来时会把 300+ 条建联基线覆盖成空表。只允许 append-baseline.cjs 追加、留备份。</span>
+<span class="c-c"># 这个坑是在另一台机器上踩出来的，现在写回技能文档当成接手第一步的必读项。</span></code></pre>
+    </div>
+
+    <!-- 8 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>七十二候 · 历法身份卡</h3>
+        <span class="tag live">在线可玩</span><span class="tag">已开源</span>
+      </div>
+      <div class="p-m">纯静态 HTML/JS · 零依赖、离线可用 · 2026.10 · GitHub Pages 直接访问</div>
+      <div class="p-d">
+        五天一候，一年 72 候。输入出生时刻，算出你落在哪一候，生成一张可分享的墨白插图身份卡。这个项目最值得讲的只有一个判断：<strong>题诗、物候释义、食俗必须逐字可考</strong>——每一条都标出处，查不到出处的写法一律不上卡面，<strong>宁可留白也不编</strong>。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        卡片渲染全在浏览器端完成，不做服务端、不存用户数据；30 秒双轨 BGM 与 8 个候应音效也是自己做的。发布走 GitHub Actions，上线 F-8 版本。
+      </div>
+      <a class="cta" href="https://cnjoe1130.github.io/hou72/" target="_blank" rel="noopener">→ 打开在线版（输入生日，看你落在哪一候）</a>
+    </div>
+
+    <!-- 9 -->
+    <div class="p">
+      <div class="p-h">
+        <h3>「像真人在画」· 作画顺序分层管线与验收闭环</h3>
+        <span class="tag hi">规范 + 验收</span><span class="tag live">成片可播</span>
+      </div>
+      <div class="p-m">调研规范 v1 + annotation v2 数据格式 + spike 任务包 + 6 条可执行验收标准 · 2026.11.01-02</div>
+      <div class="p-d">
+        白板动画做出来总被说「不像人在画」。我的第一动作不是调参数，而是去查各流派的共识：<strong>素描（Loomis / Proko）7 层、油画 underpainting 5 层、水彩「浅→深、永不动深色区」一条铁律、NPR 论文四篇</strong>（Haeberli 1990 / Litwinowicz 1997 / Secord 2002 / 语义驱动 painterly）。四条完全不同的路径收敛到同一件事——<strong>低频大形先、高频轮廓后；人类作画是「时间分层」，不是「空间分块」</strong>。我们旧的两版恰好各栽一边：分区域画有章法但「分块跳」，全画布连续爬（serpentine）没有分块感但也没有章法感。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>最关键的一次判断是「不让 AI 画阶段图」。</strong>让模型生成"起稿→铺色→刻画"四张阶段图，四张必然不是同一张画，结构一定漂；外部引擎已经实测过这条路——终点塌，只剩约 35% 还原。我改成<strong>一张完成图 → 程序化深度切片</strong>：第 k 层是前 k 层的并集，于是 <code>L1⊆L2⊆L3⊆L4</code> 且 <code>L4 = 原图</code>。<strong>层间零漂移是数学性质而不是调参结果，「终帧锁定原图」这条红线因此天然成立。</strong>
+      </div>
+      <pre><code><span class="c-c"># annotation v2：每个「深度层」= 一个 element，region 全画布，reveal 时序接力</span>
+{ "elements": [
+  {"id": "L1-construction", "reveal": {"startMs":   500, "durationMs": 6000}},  <span class="c-c"># 构图·大形</span>
+  {"id": "L2-outline",      "reveal": {"startMs":  7000, "durationMs": 7000}},  <span class="c-c"># 轮廓·五官</span>
+  {"id": "L3-shading",      "reveal": {"startMs": 14500, "durationMs": 6000}},  <span class="c-c"># 明暗·衣纹</span>
+  {"id": "L4-details",      "reveal": {"startMs": 21000, "durationMs": 8000}}   <span class="c-c"># 细节·收笔</span>
+]}
+<span class="c-c"># 约束（写进验收，逐像素断言，不靠眼看）：L1⊆L2⊆L3⊆L4 且 L4 与原图 diff=0</span></code></pre>
+      <div class="p-d" style="margin-top:14px">
+        这一步的实现我没有自己做，而是<strong>做成一份可验收的 spike 任务包交出去</strong>：两张锚点图 + <code>anchor.sha256</code>（防止交付方改锚点充数）+ 我自己先跑通的 <code>baseline-slicer.py</code> + <strong>三条候选配方</strong>（A：Sobel 梯度分位 / D：骨架提取构造层 / E：多尺度形态学轮廓）。任务单里直接写着我实测出来的结论，省得对方走弯路——<strong>方案 A 的嵌套与锁定全 PASS，但它的 L1 在 vision 验收下只是「浅淡阴影区」：梯度弱 ≠ 结构弱，主任务做 E，A 只作对照组。</strong>6 条验收标准全部可执行：逐像素嵌套、L4 diff=0、墨区覆盖率 50/75/92（±5pp 且单调）、contact sheet 深度递进、指定环境直接可跑、anchor 哈希未变。
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        <strong>交付回来 6 条全 PASS</strong>：覆盖率实测居酒屋 <strong>47.1 / 73.8 / 91.4</strong>、人像 <strong>50.1 / 75.1 / 92.1</strong>（最大偏差 3.4pp），嵌套违反 <strong>0 像素</strong>，两次运行逐字节一致。报告里还主动附了一条我没写进验收项的坏消息：换「引擎自适应阈值」口径统计时，层间残差占画布 5.8%，是两种「墨」定义的数学不可两全，不是 bug。<strong>这种交付质量是任务单里那条「禁美化语义自评、宁 null 不编」的红线换来的。</strong>
+      </div>
+      <div class="p-d" style="margin-top:14px">
+        落地成片 <strong>3 支</strong>：居酒屋与人像走素描四层（29 秒），哥特那支按规范里的油画路径自适应成另一套四层——铅笔起稿 → 暗部铺大关系 → 中间调 → 亮部与细节（34 秒）。<strong>同一套 schema 装得下素描和油画两种媒介顺序，说明分层不是我为某一支视频写的临时编排，是可复用的结构。</strong>验收脚本共 <strong>5 个</strong>，全部打在成片上而不是打在参数上：从成片抽定格、末帧与原图墨覆盖率对齐、分时段检查画面中央有没有按序上墨、逐 0.5 秒采样检测画面停滞（<code>连续两点差 &lt; 0.05pp 判"不动"</code>）。
+      </div>
+      <div class="shots" style="grid-template-columns:1fr 1fr">
+        <figure class="shot"><img src="assets/layers-contact.png" alt="四深度层 contact sheet"><figcaption><strong>2×4 contact sheet</strong>：居酒屋 + 人像各四层，「层间深度肉眼可辨」本身就是一条验收项</figcaption></figure>
+        <figure class="shot"><img src="assets/layers-planA-vs-E.png" alt="方案 A 与方案 E 的构造层对照"><figcaption><strong>为什么换配方</strong>：同一张人像的 L1 对照——方案 A 数值全 PASS 但语义错位，方案 E 才出「大形体块」的构造感</figcaption></figure>
+      </div>
+      <div style="margin-top:20px">
+        <video controls preload="metadata" src="videos/layered-izakaya.mp4" style="width:100%;display:block;border:1px solid var(--fg10)"></video>
+        <div style="font-size:12px;letter-spacing:.14em;color:var(--fg40);margin-top:8px">成片 · 居酒屋四层作画过程（29 秒 · 1080×810 · 终帧像素锁定原图）</div>
+      </div>
+      <div class="p-d" style="margin-top:14px;color:var(--fg40);font-size:13.5px">
+        边界说明：白板动画渲染器不是这一轮做的。这一轮我产出的是<strong style="color:var(--fg)">分层规范、数据格式、任务包与验收层</strong>——让别人的渲染器画得像人，靠的是我这层的判断。
+      </div>
+    </div>
   </div>
 </section>
 
@@ -464,6 +551,8 @@ Jev 判断（意图/风险 0-9）→ 按话术生成候选 → 点选填入输�
         <tr><td>记忆</td><td>三层：会话原文 <code>state.db</code>（SQLite + FTS5 全文索引，12.9 万条消息）＋ 长期记忆 <code>MEMORY.md</code>（2200 字符预算，约束驱动压缩）＋ 程序性记忆 <code>skills/</code></td></tr>
         <tr><td>韧性</td><td>四层：传输层重试（429/超时，3 次指数退避）→ 工具层错误不吞、原文回传模型 → 技能层显式降级路径 → 任务层放弃并告警（不因一次失败停摆）</td></tr>
         <tr><td>校验</td><td>批量产物硬校验：渲染 1830 帧逐帧断言，缺帧成片比渲染失败危险得多——<strong>宁可失败不可缺帧</strong></td></tr>
+        <tr><td>监督</td><td><strong>让 Agent 盯着 Agent</strong>：<code>zwatch.py</code>（39 行）以只读模式打开另一个 Agent 的会话库，取最新活动时间与最后一次工具调用，<code>idle_minutes &gt; 15</code> 即判 <code>stalled</code>；顺带列出 30 分钟内的新产物，以及"产出正落在 <code>/tmp</code> 还没归档"的风险目录</td></tr>
+        <tr><td>接入</td><td>把外部数据源做成本机面板：<code>ths-dashboard</code>（108 行 Flask、5 条路由）封装行情快照、分时历史、自选股增删查、涨停池；<strong>密钥只从环境变量读，页面与仓库里不出现密钥</strong></td></tr>
       </table>
 
       <h4 style="font-family:var(--serif);font-weight:400;font-size:18px;margin:30px 0 12px;color:var(--fg)">技能的真实结构（每个技能都是一条真实工作流）</h4>
@@ -545,7 +634,7 @@ AssertionError
 <section id="judgment">
   <div class="wrap">
     <div class="sh"><span class="sn">03</span><h2>产品判断</h2></div>
-    <p class="lead">工具谁都能用。我更想说明的是<strong>我在什么地方做了判断、为什么这样判断</strong>——这三件事是我这一年最核心的学习。</p>
+    <p class="lead">工具谁都能用。我更想说明的是<strong>我在什么地方做了判断、为什么这样判断</strong>——这五件事是我这一年最核心的学习。</p>
 
     <div class="d">
       <h4>① 副驾产品：真问题不是「没有回复」，是「打断」</h4>
@@ -564,26 +653,39 @@ AssertionError
       <p>LLM 中转服务间歇性返回 499 / 超时。我不猜，而是把可能原因拆成三项，各自设计一个<strong>能推翻自己的</strong>对照实验：① 同模型直连官方端点、绕过中转，比首 token 延迟基线 → 证伪"模型时延变长"；② 多个中转服务商跑同一请求同一 prompt 对比 → 排除"协议/端点共性问题"；③ 观察 499 出现与自身并发数的相关性，降并发重试 → 定位到<strong>并发限流</strong>。</p>
       <div class="why">修复分三层：退避重试 → 切备用中转并降并发 → 降级路径（缓存数据 + 模板化简报）继续完成任务并在产物标注降级。这条路径后来固化进系统工具调用层，成为所有技能共用的失败处理策略。<br><br><strong>做 AI 产品的门槛，一半在「懂业务」，另一半在「知道模型和基础设施的真实边界在哪」。</strong>后者不能靠看文章，只能靠动手踩过。</div>
     </div>
+
+    <div class="d">
+      <h4>④ 竞品分析：做成可复查的取证，而不是写一段观点</h4>
+      <p>要证明「我们的历法口径和别家不一样」，最省事的做法是写一段主观对比。我给 Agent 下的是一份<strong>取证任务单</strong>：固定 3 个测试生日——常规案例 / 农历闰四月的归属 / 乌鲁木齐真太阳时换算后是否换日——逐家照抄它的排盘结果，以及页面上关于闰月、早晚子时的<strong>原文说明</strong>。红线写死：<strong>只抄不评、禁止注册、禁止付费、禁止留个人信息、站点打不开就记 BLOCKED 换下一家、截图存不全宁可少交一家也不许补拍。</strong></p>
+      <div class="why">跑完 5 家候选站点，<strong>3 家完成匿名排盘取证，13 张结果截图 + 6 份抄录全部存档</strong>。于是「同一个生日在两家排出不同结果」成为可以现场打开截图核对的事实，而不是我的说法。产品文案里我也只陈述自己做过的事——<strong>「真太阳时与子时换日已按锚点案例实测校验」</strong>，不点名任何一家。</div>
+    </div>
+
+    <div class="d">
+      <h4>⑤ 商业模型：先看头部玩家怎么赚钱，再决定自己抄什么</h4>
+      <p>这个赛道的头部是 GitHub 上的 OURANIC（<strong>★11815 / fork 2325，2026-10-31 基线</strong>）：TypeScript 自研排盘引擎 <strong>MIT 开源</strong>，配套数据集 <strong>67.5 万盘 × 13 维 = 877 万段</strong>（CC BY 4.0）；变现不在开源侧，而在自己站点的 AI 解读收费。全网挂 <code>ziwei-doushu</code> 标签的 <strong>176 个仓库</strong>里它是源头，下游直接基于它建站。<strong>我的读法：开源是获客漏斗，钱在「解读层」——所以排盘这一层必须准、必须免费。</strong></p>
+      <div class="why">顺着这条线我还做了两件判断：<br><strong>一、它的 13 维断语我不搬运。</strong>那是传统算命话术，会撞我自己定的「不预测吉凶」产品红线——数据集虽标 CC BY 4.0，其中原话库部分仍是非商用。<br><strong>二、它开源引擎里有 3 个截至建档仍未关闭的 issue</strong>（真太阳时经度没接进主排盘函数、晚子时换日未按真太阳时判定、四化加分项查了不存在的星名）——<strong>恰好是我方实测已经覆盖的三条口径</strong>（iztro 双引擎校验 + 锚点案例全过 + 21 项 gate 全绿）。这就是差异点，写进文案但不点名。<br><br>而且这不是一次性看完就算：我挂了一条每周巡检任务盯它的 star 周涨幅（<strong>周涨 &gt; 30% 即标记注水嫌疑</strong>）、issue 关闭、新版本、定价变动，有事推到飞书，<strong>无事回一条 [SILENT] 不打扰</strong>——竞品情报要做成常态能力，不是面试前突击。</div>
+    </div>
   </div>
 </section>
 
 <section id="numbers">
   <div class="wrap">
     <div class="sh"><span class="sn">04</span><h2>可验证的数字</h2></div>
-    <p class="lead">我不打算只让你相信我的描述。下面每一个数字后面都对应一个可以现场打开的文件——<strong>面试时你可以随便点开任何一条让我解释结构</strong>。</p>
+    <p class="lead">我不打算只让你相信我的描述。下面每一个数字后面都对应一个可以打开的文件——<strong>标「公开」的现在就能在这个仓库里点开，标「包内」的在完整证据包（本机 570 个文件）里，面试时我带着电脑现场打开</strong>。</p>
 
     <table>
-      <tr><th>数字</th><th>对应的可查证据（全部在作品集仓库内）</th></tr>
-      <tr><td><strong>119 / 283</strong><br><span style="color:var(--fg40);font-size:12.5px">亲手写 / 技能库总量</span></td><td><code>01-agent-system/skills/</code>（99 个现存）+ <code>skills-archive/</code>（19 个退役），每个含 SKILL.md 原文</td></tr>
-      <tr><td><strong>22</strong><br><span style="color:var(--fg40);font-size:12.5px">在跑定时任务</span></td><td><code>cron/jobs.json</code> —— 每个任务的 cron 表达式与完整 prompt</td></tr>
-      <tr><td><strong>28</strong><br><span style="color:var(--fg40);font-size:12.5px">配套脚本</span></td><td><code>scripts/</code> —— 采集/监控/合并/校验，其中 6 个任务是纯脚本不付 token</td></tr>
-      <tr><td><strong>1830 帧</strong><br><span style="color:var(--fg40);font-size:12.5px">渲染硬校验闭环</span></td><td><code>logs/incident-1018-*.log</code> 三连：fail 1710 → fail 1785 → pass 1830，<strong>原始日志未美化</strong></td></tr>
-      <tr><td><strong>429 / 504</strong><br><span style="color:var(--fg40);font-size:12.5px">失败处理链路</span></td><td><code>logs/sample-retry-429.log</code>（3 次指数退避）+ <code>sample-alert-504.log</code>（系统性故障告警）</td></tr>
-      <tr><td><strong>568 条</strong><br><span style="color:var(--fg40);font-size:12.5px">真实饮食库</span></td><td><code>03-chileme/food-db-sample-20.json</code> 脱敏样例 + 151 行推荐引擎源码</td></tr>
-      <tr><td><strong>100+ 期</strong><br><span style="color:var(--fg40);font-size:12.5px">自动化产出图卡</span></td><td><code>06-market-signal/cards/</code> 真实产出 + <code>logs/sample-normal-cron-output.md</code> 完整台账</td></tr>
-      <tr><td><strong>三时间线</strong><br><span style="color:var(--fg40);font-size:12.5px">角色一致性</span></td><td><code>05-narrative/</code> 两组并排图：1999 / 2003 / 2019 同一角色跨时间线</td></tr>
+      <tr><th>数字</th><th>对应的可查证据</th></tr>
+      <tr><td><strong>119 / 283</strong><br><span style="color:var(--fg40);font-size:12.5px">亲手写 / 技能库总量</span></td><td><strong>公开</strong>：<code>evidence/ai-agent-proof.html</code> 第三节逐条列出 <strong>99 个现存技能目录名</strong> + 19 个退役目录名，并写明 119 这个数怎么加出来的 · <strong>包内</strong>：<code>01-agent-system/skills/</code> 每个目录含 SKILL.md 原文</td></tr>
+      <tr><td><strong>22</strong><br><span style="color:var(--fg40);font-size:12.5px">在跑定时任务</span></td><td><strong>公开</strong>：<code>evidence/ai-agent-proof.html</code> 第二节，22 条任务逐条 cron 表达式 + 任务名 · <strong>包内</strong>：<code>01-agent-system/cron/jobs.json</code> 含每个任务的完整 prompt（已脱敏）</td></tr>
+      <tr><td><strong>28</strong><br><span style="color:var(--fg40);font-size:12.5px">配套脚本</span></td><td><strong>公开</strong>：<code>evidence/agent-system-README.md</code> 的脚本清单与分工说明 · <strong>包内</strong>：<code>01-agent-system/scripts/</code> 采集/监控/合并/校验源码，其中 6 个任务是纯脚本不付 token</td></tr>
+      <tr><td><strong>1830 帧</strong><br><span style="color:var(--fg40);font-size:12.5px">渲染硬校验闭环</span></td><td><strong>包内</strong>：<code>01-agent-system/logs/incident-1018-*.log</code> 三连：fail 1710 → fail 1785 → pass 1830，<strong>原始日志未美化</strong>（原始 <code>.log</code> 按仓库 <code>.gitignore</code> 不入库，关键片段已原文贴在第 02 节）</td></tr>
+      <tr><td><strong>429 / 504</strong><br><span style="color:var(--fg40);font-size:12.5px">失败处理链路</span></td><td><strong>包内</strong>：<code>logs/sample-retry-429.log</code>（3 次指数退避的真实间隔）+ <code>sample-alert-504.log</code>（9-24 连环 504 告警）· <strong>公开</strong>：<code>docs/degradation-log.md</code> 成文的分级降级实录</td></tr>
+      <tr><td><strong>568 条</strong><br><span style="color:var(--fg40);font-size:12.5px">真实饮食库</span></td><td><strong>公开</strong>：<code>evidence/food-db-sample-20.json</code> 脱敏样例 + <code>evidence/chileme-recommend-engine.py</code>（151 行引擎，30 秒可读完）</td></tr>
+      <tr><td><strong>100+ 期</strong><br><span style="color:var(--fg40);font-size:12.5px">自动化产出图卡</span></td><td><strong>公开</strong>：<code>evidence/logs/sample-normal-cron-output.md</code>（57KB 无人值守完整台账）+ <code>assets/market-premarket.png</code> 等 4 张当日真实产出</td></tr>
+      <tr><td><strong>三时间线</strong><br><span style="color:var(--fg40);font-size:12.5px">角色一致性</span></td><td><strong>公开</strong>：<code>assets/narrative-consistency-1.png</code> / <code>-2.png</code> 两组并排图（1999 / 2003 / 2019 同一角色跨时间线）+ <code>evidence/narrative-engine-core.js</code> 可直接运行的引擎</td></tr>
       <tr><td><strong>0.0012</strong><br><span style="color:var(--fg40);font-size:12.5px">隐写 diff 均值/通道</span></td><td><strong>开源仓库可直接查</strong>：github.com/cnjoe1130/REDSecret，含 24+ 攻击测试脚本</td></tr>
-      <tr><td><strong>14MB</strong><br><span style="color:var(--fg40);font-size:12.5px">随驾 iOS 全链路源码</span></td><td><code>04-suijia/</code> App / Broadcast / Keyboard / Shared 四模块全量</td></tr>
+      <tr><td><strong>14MB</strong><br><span style="color:var(--fg40);font-size:12.5px">随驾 iOS 全链路源码</span></td><td><strong>公开</strong>：<code>evidence/suijia/</code> 四份核心文件（<code>SampleHandler.swift</code> 帧流→本机 OCR→App Group 写入、<code>SuiJiaStore.swift</code>、<code>NOTICE</code> 二次开发边界声明）· <strong>包内</strong>：App / Broadcast / Keyboard / Shared 全量 14MB</td></tr>
+      <tr><td><strong>6 / 6</strong><br><span style="color:var(--fg40);font-size:12.5px">作画分层验收全 PASS</span></td><td><strong>公开</strong>：<code>assets/layers-contact.png</code> 2×4 分层对照 + <code>videos/layered-izakaya.mp4</code> 成片（终帧=原图，可直接拖到最后一帧比对）· <strong>包内</strong>：交付报告逐条 PASS、<code>params.json</code> 实测阈值、<code>verify_layers.py</code> 可复跑</td></tr>
     </table>
   </div>
 </section>
@@ -615,6 +717,8 @@ AssertionError
     <table>
       <tr><th>可查文件</th><th>内容</th></tr>
       <tr><td><code>evidence/agent-system-README.md</code></td><td>Agent 系统的边界声明、目录结构、代表技能说明、22 个定时任务清单</td></tr>
+      <tr><td><code>evidence/ai-agent-proof.html</code></td><td><strong>AI / Agent 日常使用证明页</strong>（本机目录实读生成）：119 这个数怎么加出来的、22 条定时任务逐条 cron 表达式、<strong>99 个现存技能与 19 个退役技能的目录名全清单</strong>、公开可核验入口、边界声明</td></tr>
+      <tr><td><code>docs/agent-architecture.md</code> + <code>docs/degradation-log.md</code></td><td>架构说明与<strong>故障处理实录</strong>——后者开篇写明「只写我能拿出证据的故障，宁可少写一条也不能有一条是编的」</td></tr>
       <tr><td><code>evidence/logs/incident-1018-*.log</code></td><td>10-18 渲染事故三连：fail 1710 → fail 1785 → pass 1830，原始日志未美化</td></tr>
       <tr><td><code>evidence/logs/sample-retry-429.log</code></td><td>429 重试链：3 次指数退避的真实间隔</td></tr>
       <tr><td><code>evidence/logs/sample-alert-504.log</code></td><td>9-24 连环 504 告警（4 个任务连续失败）</td></tr>
